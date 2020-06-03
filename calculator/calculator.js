@@ -85,11 +85,20 @@ function power(number, factor) {
 	}
 
 	return result;
-	
+
 }
 
-function factorial() {
-	
+function factorial(number) {
+
+	result = 1;
+
+	if (number == 0){
+		return 1;
+	} else {
+		result = number * (factorial(number - 1));
+	}
+
+	return result;
 }
 
 module.exports = {
