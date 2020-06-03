@@ -56,7 +56,7 @@ function sum (...args) {
 
 function multiply (...args) {
 
-	let result = 1;
+	result = 1;
 	
 	if (Array.isArray(args)) {
 
@@ -65,9 +65,9 @@ function multiply (...args) {
 		for (let i = 0; i <= onlyOneArray.length - 1; i++) {
 			
 			if (onlyOneArray[i] != 0) {
-				console.log(onlyOneArray[i]);
-				
+		
 				result *= onlyOneArray[i];
+
 			}
 		}
 	}
@@ -76,7 +76,15 @@ function multiply (...args) {
 
 }
 
-function power() {
+function power(number, factor) {
+	
+	result = 1;
+	
+	for (let i = 1; i <= factor; i++) {
+		result *= number;		
+	}
+
+	return result;
 	
 }
 
