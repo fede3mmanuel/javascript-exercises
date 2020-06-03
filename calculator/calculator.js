@@ -41,13 +41,9 @@ function sum (...args) {
 
 		} else if (Array.isArray(args[i])) {
 			
-			for (let x = 0; x <= args[i].length - 1; x++) {
-
-				console.log("test" + args);
-				
+			for (let x = 0; x <= args[i].length - 1; x++) {				
 
 				if (typeof args[i][x] == "number") {
-					console.log("nose" + args[i][x]);
 					
 					result += args[i][x];
 				} 				
@@ -58,8 +54,26 @@ function sum (...args) {
 	return result;
 }
 
-function multiply () {
+function multiply (...args) {
+
+	let result = 1;
 	
+	if (Array.isArray(args)) {
+
+		let onlyOneArray = args.flat();
+		
+		for (let i = 0; i <= onlyOneArray.length - 1; i++) {
+			
+			if (onlyOneArray[i] != 0) {
+				console.log(onlyOneArray[i]);
+				
+				result *= onlyOneArray[i];
+			}
+		}
+	}
+
+	return result;
+
 }
 
 function power() {
