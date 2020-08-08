@@ -1,11 +1,15 @@
 const sumAll = function(firstNum, secondNum) {
 
     if (firstNum < 1 || secondNum < 1) {
+        
         return "ERROR";
+    
     }
 
     if (typeof(firstNum) != 'number' || typeof(secondNum) != 'number') {
+        
         return "ERROR";
+    
     }
 
     let startNum = 0;
